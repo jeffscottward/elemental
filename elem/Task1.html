@@ -1,0 +1,57 @@
+<div id="brinza-task-description">
+<p>You have an array of numbers and you would like to print these numbers in a tabular format to make them look more organized. Each cell of the table contains exactly one number and is surrounded by exactly four edges:</p>
+<tt style="white-space:pre-wrap">+-+
+|4|
++-+
+
++-----+
+|12345|
++-----+</tt>
+<p>As you can see above, each corner of the cell is represented by a "<tt style="white-space:pre-wrap">+</tt>" sign, vertical edges by "<tt style="white-space:pre-wrap">-</tt>" signs and horizontal edges by "<tt style="white-space:pre-wrap">|</tt>" signs. The width of the cell adjusts to accommodate the number of digits of the number written within it. There can be many cells in a row. Adjacent cells share an edge:</p>
+<tt style="white-space:pre-wrap">+---+---+---+---+
+|  4| 35| 80|123|
++---+---+---+---+</tt>
+<p>Note that each cell has the same width. The width of the cell adjusts to match the width of the longest number in the table. The numbers in cells are aligned to the right, with any unused area in each cell filled with spaces.</p>
+<p>The table can consist of many rows, and adjacent rows share an edge:</p>
+<tt style="white-space:pre-wrap">+-----+-----+-----+-----+
+|    4|   35|   80|  123|
++-----+-----+-----+-----+
+|12345|   44|    8|    5|
++-----+-----+-----+-----+
+|   24|    3|   22|   35|
++-----+-----+-----+-----+</tt>
+<p>Your goal is to output a table containing all the numbers from a given array such that each row contains exactly K numbers. The last row can contain fewer numbers.</p>
+<p>Write a function:</p>
+<blockquote><p style="font-family: monospace; font-size: 9pt; display: block; white-space: pre-wrap"><tt>function solution(A, K);</tt></p></blockquote>
+<p>that, given a non-empty array A consisting of N integers and an integer K, prints a string representing the formatted array. The numbers in the table should appear in the same order as the numbers in the array.</p>
+<p>For example, given array A = [4, 35, 80, 123, 12345, 44, 8, 5] and K = 10, the resultant table will contain exactly one row, as shown below:</p>
+<tt style="white-space:pre-wrap">+-----+-----+-----+-----+-----+-----+-----+-----+
+|    4|   35|   80|  123|12345|   44|    8|    5|
++-----+-----+-----+-----+-----+-----+-----+-----+</tt>
+<p>For A = [4, 35, 80, 123, 12345, 44, 8, 5, 24, 3], K = 4, the table would appear as follows:</p>
+<tt style="white-space:pre-wrap">+-----+-----+-----+-----+
+|    4|   35|   80|  123|
++-----+-----+-----+-----+
+|12345|   44|    8|    5|
++-----+-----+-----+-----+
+|   24|    3|
++-----+-----+</tt>
+<p>Given A = [4, 35, 80, 123, 12345, 44, 8, 5, 24, 3, 22, 35] and K = 4, the table would appear as follows:</p>
+<tt style="white-space:pre-wrap">+-----+-----+-----+-----+
+|    4|   35|   80|  123|
++-----+-----+-----+-----+
+|12345|   44|    8|    5|
++-----+-----+-----+-----+
+|   24|    3|   22|   35|
++-----+-----+-----+-----+</tt>
+<p>The function shouldn't return any value.</p>
+<p>You can print a string to the output (without or with the end-of-line character) as follows:</p>
+<blockquote><p style="font-family: monospace; font-size: 9pt; display: block; white-space: pre-wrap"><tt>process.stdout.write('sample string');
+process.stdout.write('whole line\n');</tt></p></blockquote>
+<p>Assume that:</p>
+<blockquote><ul style="margin: 10px;padding: 0px;"><li>N is an integer within the range [<span class="number">1</span>..<span class="number">200</span>];</li>
+<li>K is an integer within the range [<span class="number">1</span>..<span class="number">1,000,000,000</span>];</li>
+<li>each element of array A is an integer within the range [<span class="number">0</span>..<span class="number">1,000,000,000</span>].</li>
+</ul>
+</blockquote><p>In your solution, focus on <b><b>correctness</b></b>. The performance of your solution will not be the focus of the assessment.</p>
+</div>
